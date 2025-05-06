@@ -36,12 +36,10 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // Setup RecyclerView
         recyclerView = binding.recyclerView; // make sure recyclerView exists in fragment_home.xml
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        // Fetch data from API
         fetchItemsFromApi();
 
         return root;
